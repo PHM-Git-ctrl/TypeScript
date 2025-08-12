@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #323232;
+}
+
+.title{
+    margin: 5%;
+
+    font-family: 'Roboto';
+    font-weight: 500;
+
+    color: white;
+    letter-spacing: .04em;
+}
+
+.microsoft{
+    margin: 5%;
+    display: auto;
+    justify-content: center;
+
+    position: relative;
+
+    padding: 12px 0;
+
+    font-size: 30px;
+    font-family: 'Roboto';
+    font-weight: 500;
+
+    color: white;
+    border: 1px solid #6ee22b;
+    
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.microsoft::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    background: #6ee22b;
+    z-index: -1;
+    transition: .5s;
+}
+
+.hover::before{
+    width: 0;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+}
+
+.hover:hover::before{
+    width: 100%;
+}
